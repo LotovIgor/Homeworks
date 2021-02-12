@@ -2,7 +2,8 @@
 #include <cmath>
 using namespace std;
 int main() {
-    int n, a;
+    int n, a, s;
+    s = 0;
     cin >> n;
     int m[n];
     float c, f = (1 + sqrt(5)) / 2;
@@ -13,7 +14,7 @@ int main() {
         int a0 = 1, a1 = 1;
         for (int j = 1; j <= m[i]; j++){
             if (a1 == m[i]){
-                cout << m[i] << endl;
+                s++;
                 break;
             }
             a = a0;
@@ -23,4 +24,5 @@ int main() {
             break;
         }
     }
+    cout << s;
 }

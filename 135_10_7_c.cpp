@@ -5,14 +5,12 @@
 void on_draw_event (GtkWidget *widget, cairo_t *cr, gpointer data)
 {
     cairo_set_source_rgb(cr, 0, 0, 0);
-    cairo_move_to(cr, 100, 300);
+    cairo_move_to(cr, 200, 200);
     cairo_line_to(cr, 200, 300);
-    cairo_line_to(cr, 200, 200);
-    cairo_line_to(cr, 100, 300);
     int n = 10;
-    for (int i = 1; i < n; i++){
+    for (int i = 0; i <= n; i++){
         cairo_move_to(cr, 100, 300);
-        cairo_line_to(cr, 100, 300 - i*100/n);
+        cairo_line_to(cr, 200, 200 + i*100/n);
     }
     cairo_stroke(cr);
 }
@@ -46,4 +44,3 @@ int main( int argc, char *argv[])
     gtk_main();
  
 }
-
